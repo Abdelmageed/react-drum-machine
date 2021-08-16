@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\filebound_v7\\Core.WebViewer"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "node_modules\\typescript\\lib"
+	}
+}
