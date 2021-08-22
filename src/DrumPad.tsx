@@ -3,7 +3,9 @@ import EventListener from 'react-event-listener';
 import { Sound } from "./models";
 
 type DrumPadProps = {
-    sound: Sound
+    sound: Sound,
+    soundPlayed: (name: string) => void
+    soundEnded: (name: string) => void
 };
 
 type DrumPadState = {
@@ -18,6 +20,7 @@ export class DrumPad extends React.Component<DrumPadProps, DrumPadState> {
         this.handleClick = this.handleClick.bind(this);
         this.handleKeyDown = this.handleKeyDown.bind(this);
         this.playSound = this.playSound.bind(this);
+        this.soundEnded = this.soundEnded.bind(this);
     }
 
     handleClick() {
@@ -33,6 +36,12 @@ export class DrumPad extends React.Component<DrumPadProps, DrumPadState> {
     playSound() {
         const audio = document.getElementById(this.props.sound.key) as HTMLAudioElement;
         audio.play();
+
+        this.props.soundPlayed(this.props.sound.name);
+    }
+
+    soundEnded() {
+        this.props.soundEnded(this.props.sound.name);
     }
 
     render(): ReactNode {
@@ -45,8 +54,10 @@ export class DrumPad extends React.Component<DrumPadProps, DrumPadState> {
                     {this.props.sound.key}
                     <audio
                         id={this.props.sound.key}
-                        src={this.props.sound.path}>{this.props.sound.key}
-                        className="clip"</audio>
+                        src={this.props.sound.path}
+                        onEnded={this.soundEnded}
+                        className="clip">
+                    </audio>
                 </div>
             </EventListener>
         );
