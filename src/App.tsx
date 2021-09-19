@@ -78,7 +78,6 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div id="drum-machine">
-        <div id="display"></div>
         {
           sounds.map(sound => (
             <DrumPad

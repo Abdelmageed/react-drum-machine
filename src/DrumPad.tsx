@@ -50,7 +50,7 @@ export class DrumPad extends React.Component<DrumPadProps, DrumPadState> {
                 target="window"
                 onKeyDown={this.handleKeyDown}
             >
-                <div className="drum-pad" onClick={this.handleClick}>
+                <div className="drum-pad" id={this.props.sound.name} onClick={this.handleClick}>
                     {this.props.sound.key}
                     <audio
                         id={this.props.sound.key}
