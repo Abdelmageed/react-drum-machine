@@ -28,7 +28,7 @@ export class DrumPad extends React.Component<DrumPadProps, DrumPadState> {
     }
 
     handleKeyDown(event: KeyboardEvent) {
-        if (event.key.toLowerCase() === this.props.sound.key) {
+        if (event.key.localeCompare(this.props.sound.key, undefined, { sensitivity: 'base' }) === 0) {
             this.playSound();
         }
     }
