@@ -8,39 +8,39 @@ const sounds: Sound[] = [
   {
     name: 'kick1',
     path: `${process.env.PUBLIC_URL}/sounds/kick-1.wav`,
-    key: 'q'
+    key: 'Q'
   }, {
     name: 'kick2',
     path: `${process.env.PUBLIC_URL}/sounds/kick-2.wav`,
-    key: 'w'
+    key: 'W'
   }, {
     name: 'kick3',
     path: `${process.env.PUBLIC_URL}/sounds/kick-3.wav`,
-    key: 'e'
+    key: 'E'
   }, {
     name: 'kick4',
     path: `${process.env.PUBLIC_URL}/sounds/kick-4.wav`,
-    key: 'a'
+    key: 'A'
   }, {
     name: 'clap1',
     path: `${process.env.PUBLIC_URL}/sounds/clap-1.wav`,
-    key: 's'
+    key: 'S'
   }, , {
     name: 'clap2',
     path: `${process.env.PUBLIC_URL}/sounds/clap-2.wav`,
-    key: 'd'
+    key: 'D'
   }, {
     name: 'hi-hat-1',
     path: `${process.env.PUBLIC_URL}/sounds/hi-hat-1.wav`,
-    key: 'z'
+    key: 'Z'
   }, {
     name: 'hi-hat-2',
     path: `${process.env.PUBLIC_URL}/sounds/hi-hat-2.wav`,
-    key: 'x'
+    key: 'X'
   }, {
     name: 'bass',
     path: `${process.env.PUBLIC_URL}/sounds/bass.wav`,
-    key: 'c'
+    key: 'C'
   }
 ] as Sound[];
 
