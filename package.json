@@ -2,6 +2,7 @@
   "name": "drum-machine",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://abdelmageed.github.io/react-drum-machine/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -23,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "pre-release": "npm run build",
-    "release": "npm run pre-release && gh-pages -t -d ./dist/release"
+    "release": "npm run pre-release && gh-pages -t -d ./build"
   },
   "eslintConfig": {
     "extends": [
